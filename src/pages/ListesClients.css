@@ -1,0 +1,141 @@
+/* ListesClients.css - Liste des clients */
+
+.clients-container {
+  padding: 50px 30px;
+  background: linear-gradient(to bottom, #f5f7fa, #ffffff);
+  min-height: calc(100vh - 70px);
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: slideInDown 0.6s ease;
+}
+
+.clients-header h1 {
+  color: #333;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.clients-header p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.Ajouters-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Ajouter {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  animation: fadeIn 0.5s ease;
+}
+
+.Ajouter:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.2);
+  border-color: #FF6B6B;
+}
+
+.Ajouter h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 22px;
+  border-bottom: 3px solid #FF6B6B;
+  padding-bottom: 12px;
+  font-weight: 600;
+}
+
+.Ajouter p {
+  color: #666;
+  margin: 12px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.Ajouter strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.client-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  color: white;
+}
+
+.btn-edit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #FFE66D 0%, #FF6B6B 100%);
+  color: white;
+}
+
+.btn-delete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 230, 109, 0.4);
+}
+
+.empty-list {
+  text-align: center;
+  color: #999;
+  padding: 100px 20px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .clients-container {
+    padding: 30px 15px;
+  }
+
+  .clients-header h1 {
+    font-size: 28px;
+  }
+
+  .Ajouters-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Clients": [
+    {
+      "id": "0075",
+      "nomComplet": "ama",
+      "email": "aytyuu@glmail.com",
+      "telephone": "1234567",
+      "numeroCNI": "1233445678",
+      "categorie": {
+        "id": 1,
+        "type": "Client Particulier"
+      }
+    },
+    {
+      "id": "da2d",
+      "nomComplet": "ani nicola",
+      "email": "aninicolas@gmail.com",
+      "telephone": "41368465",
+      "numeroCNI": "5218",
+      "categorie": {
+        "id": 2,
+        "type": "Client Entreprise"
+      }
+    }
+  ]
+}

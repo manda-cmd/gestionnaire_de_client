@@ -1,0 +1,161 @@
+/* Suprimer.css - Suppression de client */
+
+.suprimer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.suprimer-modal {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 420px;
+  padding: 40px;
+  text-align: center;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.85) translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.suprimer-icon {
+  font-size: 70px;
+  color: #FF6B6B;
+  margin-bottom: 20px;
+  display: block;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.suprimer-title {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.suprimer-message {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.suprimer-info {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: #856404;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.suprimer-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-confirm-delete {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-confirm-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-confirm-delete:active {
+  transform: translateY(0);
+}
+
+.btn-cancel-delete {
+  flex: 1;
+  padding: 12px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-cancel-delete:hover {
+  background-color: #e8e8e8;
+  border-color: #FF6B6B;
+  transform: translateY(-2px);
+}
+
+.btn-cancel-delete:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .suprimer-modal {
+    padding: 30px 20px;
+  }
+
+  .suprimer-title {
+    font-size: 22px;
+  }
+
+  .suprimer-message {
+    font-size: 14px;
+  }
+}

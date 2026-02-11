@@ -1,0 +1,117 @@
+/* NotFound.css - Page 404 non trouvée */
+
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  padding: 20px;
+}
+
+.notfound-content {
+  text-align: center;
+  background-color: white;
+  padding: 80px 60px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.6s ease;
+  max-width: 500px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.notfound-icon {
+  font-size: 100px;
+  margin-bottom: 30px;
+  display: block;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.notfound-code {
+  font-size: 120px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.notfound-title {
+  font-size: 36px;
+  color: #333;
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+}
+
+.notfound-message {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0 40px 0;
+  line-height: 1.6;
+}
+
+.notfound-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.notfound-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+.notfound-button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .notfound-content {
+    padding: 60px 30px;
+  }
+
+  .notfound-code {
+    font-size: 80px;
+  }
+
+  .notfound-title {
+    font-size: 26px;
+  }
+
+  .notfound-message {
+    font-size: 16px;
+  }
+}
